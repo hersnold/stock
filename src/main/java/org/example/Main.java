@@ -38,7 +38,6 @@ public class Main {
 
         System.out.println();
         System.out.println("Updated: " + productEntity);
-
         sc.close();
     }
 }

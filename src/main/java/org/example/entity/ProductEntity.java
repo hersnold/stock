@@ -2,10 +2,9 @@ package org.example.entity;
 
 public class ProductEntity {
 
-    public String nameProduct;
-    public double priceProduct;
-    public int quantityProduct;
-
+    private String nameProduct;
+    private double priceProduct;
+    private int quantityProduct;
 
     public ProductEntity(){
     }
@@ -19,6 +18,30 @@ public class ProductEntity {
     public ProductEntity(String nameProduct, double priceProduct){
         this.nameProduct = nameProduct;
         this.priceProduct = priceProduct;
+    }
+
+    public String getNameProduct() {
+        return nameProduct;
+    }
+
+    public void setNameProduct(String nameProduct) {
+        this.nameProduct = nameProduct;
+    }
+
+    public double getPriceProduct() {
+        return priceProduct;
+    }
+
+    public void setPriceProduct(double priceProduct) {
+        this.priceProduct = priceProduct;
+    }
+
+    public int getQuantityProduct() {
+        return quantityProduct;
+    }
+
+    public void setQuantityProduct(int quantityProduct) {
+        this.quantityProduct = quantityProduct;
     }
 
     public double totalValueStock() {
