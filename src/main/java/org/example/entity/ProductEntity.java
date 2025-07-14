@@ -6,19 +6,26 @@ public class ProductEntity {
     public double priceProduct;
     public int quantityProduct;
 
-    public double totalValueStock(){
-        return priceProduct * quantityProduct;    }
+    public ProductEntity(String nameProduct, double priceProduct, int quantityProduct){
+        this.nameProduct = nameProduct;
+        this.priceProduct = priceProduct;
+        this.quantityProduct = quantityProduct;
+    }
+
+    public double totalValueStock() {
+        return priceProduct * quantityProduct;
+    }
 
 
-    public void addProduct(int quantity){
+    public void addProduct(int quantity) {
         this.quantityProduct += quantity;
     }
 
-    public void removeProduct(int quantity){
+    public void removeProduct(int quantity) {
         this.quantityProduct -= quantity;
     }
 
-    public String toString(){
+    public String toString() {
         return nameProduct
                 + ", $ "
                 + String.format("%.2f", priceProduct)

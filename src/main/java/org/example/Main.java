@@ -13,29 +13,28 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        ProductEntity productEntity = new ProductEntity();
-
         System.out.println("Enter product data to be added in stock");
         System.out.print("Name: ");
-        productEntity.nameProduct = sc.nextLine();
+        String nameProduct = sc.nextLine();
         System.out.print("Price: $ ");
-        productEntity.priceProduct = sc.nextDouble();
+        double priceProduct = sc.nextDouble();
         System.out.print("Quantity in stock: ");
-        productEntity.quantityProduct = sc.nextInt();
+        int quantityProduct = sc.nextInt();
+        ProductEntity productEntity = new ProductEntity(nameProduct, priceProduct, quantityProduct);
 
         System.out.println();
         System.out.println("Product data: " + productEntity);
 
         System.out.println("Enter product data to be added in stock");
-        int quantity = sc.nextInt();
-        productEntity.addProduct(quantity);
+        quantityProduct = sc.nextInt();
+        productEntity.addProduct(quantityProduct);
 
         System.out.println();
         System.out.println("Updated: " + productEntity);
 
         System.out.println("Enter product data to be removed from stock");
-        quantity = sc.nextInt();
-        productEntity.removeProduct(quantity);
+        quantityProduct = sc.nextInt();
+        productEntity.removeProduct(quantityProduct);
 
         System.out.println();
         System.out.println("Updated: " + productEntity);
