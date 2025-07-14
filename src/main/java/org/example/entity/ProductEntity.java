@@ -6,10 +6,19 @@ public class ProductEntity {
     public double priceProduct;
     public int quantityProduct;
 
+
+    public ProductEntity(){
+    }
+
     public ProductEntity(String nameProduct, double priceProduct, int quantityProduct){
         this.nameProduct = nameProduct;
         this.priceProduct = priceProduct;
         this.quantityProduct = quantityProduct;
+    }
+
+    public ProductEntity(String nameProduct, double priceProduct){
+        this.nameProduct = nameProduct;
+        this.priceProduct = priceProduct;
     }
 
     public double totalValueStock() {
