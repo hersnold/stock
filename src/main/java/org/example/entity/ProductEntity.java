@@ -40,10 +40,6 @@ public class ProductEntity {
         return quantityProduct;
     }
 
-    public void setQuantityProduct(int quantityProduct) {
-        this.quantityProduct = quantityProduct;
-    }
-
     public double totalValueStock() {
         return priceProduct * quantityProduct;
     }
